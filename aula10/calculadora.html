@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Calculadora</title>
+    <style>
+        button {
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            margin: 5px;
+            
+        }
+
+        input {
+            width: 245px;
+            height: 50px;
+            border: solid;
+        }
+
+        body {
+            padding: 10px;
+            border: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minha Calculadora</h1> <br>
+    <input type="text" id="display" disabled><br>
+    <button onclick="appenToDisplay('1')">1</button>
+    <button onclick="appenToDisplay('2')">2</button>
+    <button onclick="appenToDisplay('3')">3</button>
+    <button onclick="operate('+')">+</button><br>
+
+    <button onclick="appenToDisplay('4')">4</button>
+    <button onclick="appenToDisplay('5')">5</button>
+    <button onclick="appenToDisplay('6')">6</button>
+    <button onclick="operate('-')">-</button><br>
+
+    <button onclick="appenToDisplay('7')">7</button>
+    <button onclick="appenToDisplay('8')">8</button>
+    <button onclick="appenToDisplay('9')">9</button>
+    <button onclick="operate('*')">*</button><br>
+
+    <button onclick="appenToDisplay('0')">0</button>
+    <button onclick="clearDisplay()">C</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="operate('/')">/</button>
+
+    <script>
+            //Função para adincionar digitos
+            function appenToDisplay(value){
+                document.getElementById('display').value += value;
+            }
+
+            //Função para realizar operações
+            function operate(operator) {
+                var display = document.getElementById('display');
+                display.value += operator;
+            }
+
+            // Função para limpar o display
+            function clearDisplay() {
+                document.getElementById('display').value = '';
+            }
+
+            // Função para calcular o resultado
+            function calculate() {
+                var display = document.getElementById('display');
+                display.value = eval(display.value)
+            }
+
+    </script>
+
+    
+</body>
+</html>
