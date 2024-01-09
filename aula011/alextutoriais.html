@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bíblia Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bíblia Online</h1>
+    </header>
+    <section id="books-list">
+        <!-- Lista de livros será inserida aqui dinamicamente com JavaScript -->
+    </section>
+    <section id="verses-list">
+        <!-- Versículos serão inseridos aqui dinamicamente com JavaScript -->
+        
+    </section>
+    
+
+    <script>
+        // Exemplo de lista de livros da Bíblia
+const books = ['Gênesis', 'Êxodo', 'Levítico', 'Números', 'Deuteronômio', 'Josué', 'Juízes', 'Rute', '1 Samuel', '2 Samuel', '1 Reis', '2 Reis', '1 Crônicas', '2 Crônicas', 'Esdras', 'Neemias', 'Ester', 'Jó', 'Salmos', 'Provérbios', 'Eclesiastes', 'Cânticos', 'Isaías', 'Jeremias', 'Lamentações', 'Ezequiel', 'Daniel', 'Oséias', 'Joel', 'Amós', 'Obadias', 'Jonas', 'Miquéias', 'Naum', 'Habacuque', 'Sofonias', 'Ageu', 'Zacarias', 'Malaquias', 'Mateus', 'Marcos', 'Lucas', 'João', 'Atos', 'Romanos', '1 Coríntios', '2 Coríntios', 'Gálatas', 'Efésios', 'Filipenses', 'Colossenses', '1 Tessalonicenses', '2 Tessalonicenses', '1 Timóteo', '2 Timóteo', 'Tito', 'Filemom', 'Hebreus', 'Tiago', '1 Pedro', '2 Pedro', '1 João', '2 João', '3 João', 'Judas', 'Apocalipse'];
+
+const booksList = document.getElementById('books-list');
+const versesList = document.getElementById('verses-list');
+
+// Função para exibir a lista de livros
+function displayBooks() {
+    booksList.innerHTML = '';
+    books.forEach(book => {
+        const button = document.createElement('button');
+        button.textContent = book;
+        button.classList.add('book-button');
+        button.addEventListener('click', () => displayVerses(book));
+        booksList.appendChild(button);
+    });
+}
+
+// Função para exibir os versículos do livro selecionado
+function displayVerses(book) {
+    // Aqui você pode adicionar lógica para carregar os versículos do livro selecionado
+    // Por enquanto, vamos apenas exibir uma mensagem de exemplo
+    versesList.innerHTML = `<p>Versículos do livro de ${book} serão exibidos aqui.</p>`;
+}
+
+// Inicializa a exibição da lista de livros
+displayBooks();
+
+    </script>
+</body>
+</html>

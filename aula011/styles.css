@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+#books-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.book-button {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+#verses-list {
+    padding: 20px;
+}
+
+/* Adicione isso ao seu arquivo CSS */
+#chapters-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.chapter-button {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #28a745; /* Cor verde para os capítulos */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}

@@ -13,22 +13,34 @@
             
         }
 
-        input {
+        input { 
+            font-size: 40px;
             width: 245px;
             height: 50px;
             border: solid;
+            background-color: azure;
         }
 
         body {
             padding: 10px;
-            border: 20px;
+            border: 2px solid;
+            text-align: center;
+            height: 50vh;
+            width: 20vw;
+            background: rgba(255, 255, 255, 0.938);
         }
+        button:hover{
+            background-color: aqua;
+        }
+        
+
+
     </style>
 </head>
 <body>
     <h1>Minha Calculadora</h1> <br>
     <input type="text" id="display" disabled><br>
-    <button onclick="appenToDisplay('1')">1</button>
+    <button onclick="clearDisplay('C')">C</button>
     <button onclick="appenToDisplay('2')">2</button>
     <button onclick="appenToDisplay('3')">3</button>
     <button onclick="operate('+')">+</button><br>
@@ -43,8 +55,8 @@
     <button onclick="appenToDisplay('9')">9</button>
     <button onclick="operate('*')">*</button><br>
 
-    <button onclick="appenToDisplay('0')">0</button>
-    <button onclick="clearDisplay()">C</button>
+    <button onclick="appenToDisplay('1')">1</button>
+    <button onclick="appenToDisplay(2)">2</button>
     <button onclick="calculate()">=</button>
     <button onclick="operate('/')">/</button>
 
